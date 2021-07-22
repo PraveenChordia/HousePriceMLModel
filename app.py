@@ -1,6 +1,4 @@
-import server
-#import util
+from server import app
 
-if __name__ == 'main':
-    server.load_saved_artifacts()
-    server.app.run()
+if __name__ == "main":
+    app.run()
