@@ -10,6 +10,7 @@ def home():
 
 @app.route('/get_location_names', methods=['GET'])
 def get_location_names():
+    util.load_saved_artifacts()
     response = jsonify({
         'locations': util.get_location_names()
     })
@@ -28,6 +29,3 @@ def predict_home_price():
     })
     #response.headers.add('Access-Control-Allow-Origin', '*')
     return response
-
-def load_saved_artifacts():
-    util.load_saved_artifacts()
