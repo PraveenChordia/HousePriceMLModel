@@ -10,7 +10,6 @@ def home():
 
 @app.route('/get_location_names', methods=['GET'])
 def get_location_names():
-    util.load_saved_artifacts()
     response = jsonify({
         'locations': util.get_location_names()
     })
