@@ -28,3 +28,6 @@ def predict_home_price():
     })
     #response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
+def load_saved_artifacts():
+    util.load_saved_artifacts()
